@@ -1,0 +1,20 @@
+13545ecd-c207-494f-b5f9-67bdb30b2b25:1722411692040:10:S:select instr('AABAACAABBAA','B')from dual;
+ca353ad4-8546-4a4d-ab59-b2ce9a047380:1722411692318:7:S:select instr('AABAACAABBAA','B',1,2)from dual;
+da01bbce-10f3-4d4e-90fa-19cdd020dd9d:1722411692544:5:S:select instr('AABAACAABBAA','B',1,3)from dual;
+503b6c8e-47d0-44b0-8198-445b9476349a:1722411692776:6:S:select instr('AABAACAABBAA','B',-1)from dual;
+055e3499-3a87-4e9f-b106-b09065b2b65b:1722411693267:15:S:select email, instr(EMAIL, '@') , emp_no , instr(emp_no, '-')from emp;
+4eb05a0c-7b10-43fe-9ba1-46e5452ad3e8:1722411693630:4:S:select substr('show me the money', 7)\nfrom dual;
+4531625d-0754-44fd-a77f-0831480d0199:1722411693774:4:S:select substr('show me the money', 5 , 2)\nfrom dual;
+03c73caf-b5af-41e4-80ab-fc9d1a6f71b4:1722411693948:4:S:select substr('show me the money',-9 , 3)\nfrom dual;
+761be4a7-ffd0-4358-aedf-7d3a0efd6221:1722411694138:5:S:select substr('쇼우 미 더 머니', 1 , 2)\nfrom dual;
+d3c7b220-6671-4f8f-90a0-75ed4ca19af3:1722411694823:11:S:select email, email,1,instr(EMAIL, '@')  , email, instr(email,'@')-1\nfrom emp;
+b2660451-c644-4fc2-9b28-1deccc2bae2c:1722411695168:0:F:,substr( email,1,instr(EMAIL, '@')-1 )
+85619425-38a2-432b-8b7d-53f209d689c5:1722411695266:0:F:,substr( email,instr(EMAIL, '@')+1)
+ee2bf78d-40e7-4ba8-ad41-c22c6429142a:1722411695319:0:F:from emp;
+36423ce2-fc25-433d-87c1-462623739903:1722411695998:13:S:select EMP_NO \n        ,SUBSTR(EMP_NO,instr(EMP_NO, '-')+1,1) ||'******'\n        ,substr(emp_no,1,instr(EMP_NO, '-')+1) || '******'\nfrom emp;
+8c8028d2-974e-40e0-bf84-0ba534ae1ea7:1722411696496:12:S:select *\nfrom emp\n--where SUBSTR(emp_no,instr(EMP_NO, '-')+1,1) in (2,4);\nWHERE SUBSTR(emp_no, 8, 1) in (2,4);
+d90b9c9d-8e08-4e55-8298-5d6d36a4186b:1722411697041:6:S:select *\nfrom DEPT\nwhere instr('D1|D2|D3',DEPT_ID) > 0;
+3c28528e-bc96-44e2-ad47-ffdfd5a96fab:1722411697346:8:S:select email, lpad(email, 20 ,'*')\nfrom emp;
+241931d1-03de-4dcd-ad4b-0cf4a64e79a5:1722411697580:7:S:select email, rpad(email, 20)\nfrom emp;
+591d51d3-1c59-4154-a0c0-c4063fd7f8da:1722411697846:7:S:select email, rpad(email, 10)\nfrom emp;
+0fcef95e-7102-4747-84e9-d9a667399be7:1722411698238:11:S:select rpad(substr(EMP_NO, 1, instr(EMP_NO,'-')+1),14,'*')\nfrom emp;
