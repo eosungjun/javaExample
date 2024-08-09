@@ -410,6 +410,3 @@ SELECT sysdate from dual;
 
 
 
-
-
-
